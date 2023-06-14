@@ -39,7 +39,11 @@
     margin-top:15px;
     font-size: 20px;
     color: #999;
-    max-width: 40%;
+    max-width:40%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis ;
+   
 }
 .featured--buttons {
     margin-top: 15px;

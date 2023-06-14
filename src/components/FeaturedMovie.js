@@ -7,7 +7,7 @@ export default ({item})=>{
     for (let i  in item.genres) {
         genres.push(item.genres[i].name)
     }
-    
+    let description = item.overview;
     return(
        <section className="featured" style={{backgroundSize:'cover',backgroundPosition:'center',backgroundImage:`url(https://image.tmdb.org/t/p/original${item.backdrop_path})`}}>
             <div className="featured--vertical">
@@ -18,7 +18,7 @@ export default ({item})=>{
                         <div className="featured--years">{firstDate.getFullYear()}</div>
                         <div className="featured--seasons">{item.number_of_seasons} temporadas{item.number_of_seasons !== 1 ? 's' : ''} </div>
                     </div>
-                    <div className="featured--description">{item.overview}</div>
+                    <div className="featured--description">{description}</div>
                     <div className="featured--buttons">
                         <a href={`/wacth/${item.id}`} className="featured--wacth">► Assitir</a>
                         <a href={`/list/add${item.id}`}className="featured--mylistbutton">+ A Minha Lista</a>
